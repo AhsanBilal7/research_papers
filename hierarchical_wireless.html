@@ -303,8 +303,13 @@
   </section>
   <!--End BibTex citation -->
 
+  fetch('footer.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('footer-container').innerHTML = html;
+  });
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8">
@@ -324,7 +329,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
   <!-- Statcounter tracking code -->
 
